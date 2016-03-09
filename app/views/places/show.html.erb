@@ -28,7 +28,7 @@ function initMap() {
  
   <div id="map"></div>
 <% end %>
-
+<br />
 <!--Edit & Delete Buttons -->
   <div class="pull-right">
     <% if current_user && current_user == @place.user %>
@@ -74,7 +74,8 @@ function initMap() {
  <!--Photo Display-->
 <div class="booyah-box col-xs-10 col-xs-offset-1 photobox">
 <h1 class="pull-left"><%= "Photos of #{@place.name}" %></h1>
-<br />
+<br /><br />
+<div class="clear"></div>
 
 <% @place.photos.each do |photo| %>
   <%= image_tag photo.picture, :class => 'img-responsive' %>
